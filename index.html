@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Autocomplete address input to get lat and lng</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<div class="container">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Address</h3>
+  </div>
+  <div class="panel-body">
+   <input id="autocomplete" placeholder="Enter your address" type="text" class="form-control">
+      <br>
+   <div id="address">
+      <div class="row">
+         <div class="col-md-6">
+            <label class="control-label">Latitude</label>
+            <input class="form-control" id="lat" disabled="true">
+         </div>
+         <div class="col-md-6">
+            <label class="control-label">Longitude</label>
+            <input class="form-control" id="long" disabled="true">
+         </div>
+      </div>
+   </div>
+</div>
+  </div>
+</div>  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmGxQ_Cn12lhJ8gvSGrhJllvKKnmR9hn4&libraries=places&callback=initAutocomplete" async defer></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
